@@ -7,10 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  >
-  <ion-item *ngIf="travel.length.done < 10">
-    <ion-label><h1>Não há tarefas!</h1></ion-label>
-  </ion-item>
+<ion-content>
 
   <ion-item-sliding *ngFor="let item of travel" >
     <ion-item (click)="openActions(item)" >

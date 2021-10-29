@@ -8,6 +8,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Trilhas e etc...', url: 'home', icon: 'map' },
     { title: 'Minhas Trilhas', url: 'list', icon: 'trail-sign' },
+    { title: 'Informção', url: 'info', icon: 'help-circle' },
   ];
   
 }
