@@ -1,19 +1,25 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-buttons slot="start" color="dark">
-      <ion-menu-button color="dark"></ion-menu-button>
+      <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>Minhas Trilhas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  >
+  <ion-item *ngIf="travel.length.done < 10">
+    <ion-label><h1>Não há tarefas!</h1></ion-label>
+  </ion-item>
 
-  <ion-item-sliding>
-    <ion-item (click)="openActions()">
-      <ion-icon slot="start" name="radio-button-off" ></ion-icon>
-      <ion-label>Parque Nacional da Serra dos Órgãos</ion-label>
+  <ion-item-sliding *ngFor="let item of travel" >
+    <ion-item (click)="openActions(item)" >
+      <ion-icon slot="start" name="radio-button-off"  *ngIf="!item.done" ></ion-icon>
+      <ion-icon slot="start" color="success" name="checkmark-circle" *ngIf="item.done"></ion-icon>
+      <ion-label *ngIf="!item.done" color="dark">{{item.name}}</ion-label>
+      <ion-label *ngIf="item.done" color="dark"><del>{{item.name}}</del></ion-label>
     </ion-item>  
+
   </ion-item-sliding>
 
 
