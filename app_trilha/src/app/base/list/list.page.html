@@ -7,12 +7,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="secondary">
 
-  <ion-item-sliding *ngFor="let item of travel" >
+  <ion-item-sliding *ngFor="let item of travel" color="success">
     <ion-item (click)="openActions(item)" >
       <ion-icon slot="start" name="radio-button-off"  *ngIf="!item.done" ></ion-icon>
-      <ion-icon slot="start" color="success" name="checkmark-circle" *ngIf="item.done"></ion-icon>
+      <ion-icon slot="start" color="danger" name="checkmark-circle" *ngIf="item.done"></ion-icon>
       <ion-label *ngIf="!item.done" color="dark">{{item.name}}</ion-label>
       <ion-label *ngIf="item.done" color="dark"><del>{{item.name}}</del></ion-label>
     </ion-item>  

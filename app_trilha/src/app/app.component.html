@@ -1,11 +1,11 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+      <ion-content color="secondary">
         
         <ion-list id="inbox-list">
           <ion-list-header> <ion-icon name="earth"></ion-icon> Trilhas e Etc </ion-list-header>
-          <ion-note>Trilhas_e_etc@gmail.com</ion-note>
+          <ion-note>trilhas_e_etc@gmail.com</ion-note>
         
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
